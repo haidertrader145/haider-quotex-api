@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: quotex-api-haider
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    plan: free
+    autoDeploy: true
+    envVars:
+      - key: QUOTEX_EMAIL
+        value: traderhaider001@gmail.com
+      - key: QUOTEX_PASSWORD
+        value: haider5151
+      - key: QUOTEX_HOST
+        value: market-qx.trade
